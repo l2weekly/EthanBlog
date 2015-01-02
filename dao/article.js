@@ -19,7 +19,7 @@ module.exports = {
 
 		return deferred.promise;
 	},
-	remove:  function(obj) {
+	remove: function(obj) {
 		var deferred = Q.defer();
 
 		this.Article.remove(obj, function(err, article) {

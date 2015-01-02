@@ -1,7 +1,7 @@
 {
 	"port": 8888,
 	"mongodb": {
-		"comments":[
+		"comments": [
 			"已开启用户验证 mongodb://user:pwd@host:port/database",
 			"未开启用户验证 mongodb://host:port/database"
 		],

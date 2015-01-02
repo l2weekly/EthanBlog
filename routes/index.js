@@ -5,7 +5,9 @@ var Exception = require('../lib/exception');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/articles', function(req, res) {
+router.get('/articles', function(req, res, next) {
+	next();
+}, function(req, res) {
 	//var instance = new Article({
 	//    title: 'test',
 	//    content: 'testContent',
@@ -25,7 +27,7 @@ router.get('/delete', function(req, res) {
 
 });
 
-router.get('/post', function doPost(req, res) {
+router.get('/post', function(req, res) {
 	res.render('index', {
 		title: 'wannabe'
 	});
