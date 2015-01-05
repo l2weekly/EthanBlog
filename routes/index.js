@@ -1,13 +1,14 @@
 var express = require('express');
-var ArticleDao = require('../dao/article');
+var ArticleDao = require('./article');
 var Exception = require('../lib/exception');
 
 var router = express.Router();
 
+router.get('/articles').then(function(req, res) {
+
+}).done();
 /* GET home page. */
-router.get('/articles', function(req, res, next) {
-	next();
-}, function(req, res) {
+router.get('/articles', function(req, res) {
 	//var instance = new Article({
 	//    title: 'test',
 	//    content: 'testContent',

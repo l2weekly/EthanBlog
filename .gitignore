@@ -15,4 +15,6 @@ node_modules
 # Ignore Windows desktop setting file
 desktop.ini
 
-
+# Ignore CoffeeScript generated files
+models/*.js
+models/*.map

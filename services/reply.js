@@ -1,10 +1,10 @@
 var Q = require('q');
 
-var mongoose = require('../lib/mongoose');
+var mongoose = require('../models/index');
 var Exception = require('../lib/exception');
 
 module.exports = {
-	Reply: mongoose.Reply,
+	Reply: index.Reply,
 
 	save: function(obj) {
 		var deferred = Q.defer();
