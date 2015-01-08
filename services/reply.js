@@ -1,59 +1,32 @@
-var Q = require('q');
-
-var mongoose = require('../models/index');
-var Exception = require('../lib/exception');
+var Reply = require('../models').Reply;
 
 module.exports = {
-	Reply: index.Reply,
-
 	save: function(obj) {
-		var deferred = Q.defer();
-
-		var instance = new this.Reply(obj);
-		instance.save(function(err, reply) {
+		var reply = new Reply(obj);
+		reply.save(function(err, reply) {
 			if (err) {
-				throw new Exception(Exception.DBError, err.message);
+				throw err;
 			}
-
-			deferred.resolve(reply);
+			return reply;
 		});
-
-		return deferred.promise;
 	},
-	remove: function(obj) {
-		var deferred = Q.defer();
-
-		this.Reply.remove(obj, function(err, reply) {
-			if (err) {
-				throw new Exception(Exception.DBError, err.message);
-			}
-			deferred.resolve(reply);
-		});
-
-		return deferred.promise;
+	remove: function(_id) {
+		Reply.findByIdAndRemove(_id);
 	},
 	update: function(obj) {
-		var deferred = Q.defer();
-
-		this.Reply.update({_id: obj._id}, obj, {}, function(err, reply) {
+		Reply.update({_id: obj._id}, obj, {}, function(err, numberAffected, reply) {
 			if (err) {
-				throw new Exception(Exception.DBError, err.message);
+				throw err;
 			}
-			deferred.resolve(reply);
+			return reply;
 		});
-
-		return deferred.promise;
 	},
-	findByCondition: function(obj) {
-		var deferred = Q.defer();
-
-		this.Reply.find(obj || {}, function(err, replys) {
+	findByArticle: function(_id) {
+		Reply.find({article: _id}, null, function(err, replies) {
 			if (err) {
-				throw new Exception(Exception.DBError, err.message);
+				throw err;
 			}
-			deferred.resolve(replys);
+			return replies;
 		});
-
-		return deferred.promise;
 	}
 };
