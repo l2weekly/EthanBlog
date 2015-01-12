@@ -8,6 +8,7 @@
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
 
 var articleSchema = new Schema({
 	title: String,
@@ -17,7 +18,7 @@ var articleSchema = new Schema({
 	reply_count: {type: Number, default: 0},
 	visit_count: {type: Number, default: 0},
 	is_top: {type: Boolean, default: false},
-	tag: [String]
+	tag: [ObjectId]
 });
 
 mongoose.model('Article', articleSchema);

@@ -1,4 +1,3 @@
-var debug = require('debug')('EthanBlog');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -12,6 +11,8 @@ var routes = require('./web_router');
 var config = require('./config');
 
 var app = express();
+
+app.set('showStackError', true);
 
 // 模板引擎设置
 app.set('views', path.join(__dirname, 'views'));

@@ -8,6 +8,7 @@
   "dependencies": {
     "bluebird": "^2.6.0",
     "body-parser": "~1.8.1",
+    "connect": "^3.3.4",
     "cookie-parser": "~1.3.3",
     "debug": "~2.0.0",
     "ejs": "~0.8.5",
@@ -16,5 +17,20 @@
     "morgan": "~1.3.0",
     "promise": "^6.0.1",
     "serve-favicon": "~2.1.3"
-  }
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "description": "EthanBlog =========",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/l2weekly/EthanBlog.git"
+  },
+  "author": "ethan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/l2weekly/EthanBlog/issues"
+  },
+  "homepage": "https://github.com/l2weekly/EthanBlog"
 }

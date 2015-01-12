@@ -15,4 +15,5 @@ node_modules
 # Ignore Windows desktop setting file
 desktop.ini
 
-
+# Bower dependency directory
+bower_components
