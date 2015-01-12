@@ -1,0 +1,17 @@
+{
+	"name": "EthanBlog",
+	"version": "0.0.1",
+	"homepage": "https://github.com/l2weekly/EthanBlog",
+	"authors": [
+		"ethan"
+	],
+	"main": "app.js",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
