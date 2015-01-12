@@ -1,17 +1,23 @@
 {
-	"name": "EthanBlog",
-	"version": "0.0.1",
-	"homepage": "https://github.com/l2weekly/EthanBlog",
-	"authors": [
-		"ethan"
-	],
-	"main": "app.js",
-	"license": "MIT",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	]
+  "name": "EthanBlog",
+  "version": "0.0.1",
+  "homepage": "https://github.com/l2weekly/EthanBlog",
+  "authors": [
+    "ethan"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-route": "~1.3.8",
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.1"
+  }
 }
